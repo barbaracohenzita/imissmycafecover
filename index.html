@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miss My Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>I Miss My Cafe</h1>
+            <p class="subtitle">Recreate the cozy ambience of your favorite coffee shop</p>
+        </header>
+
+        <main class="controls-section">
+            <div class="master-controls">
+                <button id="playPauseBtn" class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <svg class="pause-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                </button>
+                <div class="master-volume">
+                    <label for="masterVolume">Master Volume</label>
+                    <input type="range" id="masterVolume" min="0" max="100" value="70" class="volume-slider">
+                    <span class="volume-value">70%</span>
+                </div>
+            </div>
+
+            <div class="sound-controls">
+                <div class="sound-control">
+                    <div class="sound-header">
+                        <span class="sound-icon">☕</span>
+                        <h3>Coffee Machine</h3>
+                    </div>
+                    <input type="range" class="volume-slider" id="coffeeVolume" min="0" max="100" value="50" data-sound="coffee">
+                    <span class="volume-value">50%</span>
+                </div>
+
+                <div class="sound-control">
+                    <div class="sound-header">
+                        <span class="sound-icon">💬</span>
+                        <h3>Chatter</h3>
+                    </div>
+                    <input type="range" class="volume-slider" id="chatterVolume" min="0" max="100" value="40" data-sound="chatter">
+                    <span class="volume-value">40%</span>
+                </div>
+
+                <div class="sound-control">
+                    <div class="sound-header">
+                        <span class="sound-icon">🥤</span>
+                        <h3>Cups & Dishes</h3>
+                    </div>
+                    <input type="range" class="volume-slider" id="dishesVolume" min="0" max="100" value="30" data-sound="dishes">
+                    <span class="volume-value">30%</span>
+                </div>
+
+                <div class="sound-control">
+                    <div class="sound-header">
+                        <span class="sound-icon">🎵</span>
+                        <h3>Background Music</h3>
+                    </div>
+                    <input type="range" class="volume-slider" id="musicVolume" min="0" max="100" value="25" data-sound="music">
+                    <span class="volume-value">25%</span>
+                </div>
+
+                <div class="sound-control">
+                    <div class="sound-header">
+                        <span class="sound-icon">🌧️</span>
+                        <h3>Rain</h3>
+                    </div>
+                    <input type="range" class="volume-slider" id="rainVolume" min="0" max="100" value="0" data-sound="rain">
+                    <span class="volume-value">0%</span>
+                </div>
+
+                <div class="sound-control">
+                    <div class="sound-header">
+                        <span class="sound-icon">🔥</span>
+                        <h3>Fireplace</h3>
+                    </div>
+                    <input type="range" class="volume-slider" id="fireplaceVolume" min="0" max="100" value="0" data-sound="fireplace">
+                    <span class="volume-value">0%</span>
+                </div>
+            </div>
+
+            <div class="presets">
+                <h3>Presets</h3>
+                <div class="preset-buttons">
+                    <button class="preset-btn" data-preset="morning">☀️ Morning Rush</button>
+                    <button class="preset-btn" data-preset="afternoon">🌤️ Quiet Afternoon</button>
+                    <button class="preset-btn" data-preset="rainy">🌧️ Rainy Day</button>
+                    <button class="preset-btn" data-preset="cozy">🔥 Cozy Evening</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Enjoy the ambience of a coffee shop from anywhere</p>
+            <p class="note">Note: Add your own audio files to the 'sounds' folder for full experience</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
